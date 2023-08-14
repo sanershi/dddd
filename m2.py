@@ -8,14 +8,6 @@ PORT = 9987
 # TCP soketi oluştur
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Adresi ve portu bağla
-server_socket.bind((HOST, PORT))
-
-# Bağlantıları dinlemeye başla
-server_socket.listen()
-
-print('Sunucu dinlemede...')
-
 # İstemci bağlantısını kabul et
 def handle_client(client_socket, client_address):
     print(f'{client_address} bağlandı.')
